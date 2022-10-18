@@ -2,7 +2,7 @@
 
 ## Hello world
 
-### Code
+
 ```javascript
 console.log("Hello world!")
 ```
@@ -17,6 +17,8 @@ Hello world!
 
 ---
 <br/><br/>
+
+
 
 ## Variables Constant and Usage
 
@@ -170,7 +172,7 @@ string
 ---
 <br/><br/>
 
-### Menthods
+### String Menthods
 
 #### **length**
 
@@ -271,7 +273,7 @@ Banana
 ---
 <br/><br/>
 
-### **replace()**
+#### **replace()**
 
 > replace() trả về một chuỗi được thay thế từ chuỗi gốc, và chỉ thay thế chuỗi đầu tiên tìm thấy
 
@@ -406,6 +408,170 @@ console.log(arr)
  
 ```javasript
 [ 'Sang', index: 0, input: 'Sang đang ở nhà Sang', groups: undefined ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+## Working with Array
+
+### Khai báo Array
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+```
+
+<br/>
+
+### Array Menthods
+
+#### **toString()**
+
+> Chuyển arr về dạng str
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+let str_arr = arr.toString()
+console.log(str_arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+xin,chào,mọi,người
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **join()**
+
+> Chuyển arr về dạng str nhưng chèn vào giữa các phần tử là chuỗi truyền vào
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+let join_arr = arr.join(' ')
+console.log(join_arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+xin chào mọi người
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **pop()**
+
+> Bỏ 1 phần tử cuối trong mảng
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+arr.pop()
+console.log(arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'xin', 'chào', 'mọi' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **push()**
+
+> Thêm 1 phần tử vào cuối mảng
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+arr.push('nhen')
+console.log(arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'xin', 'chào', 'mọi', 'người', 'nhen' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **shift()**
+
+> Bỏ phần tử đầu mảng
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+arr.shift()
+console.log(arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'chào', 'mọi', 'người' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **unshift()**
+> Thêm một phần tử vào đầu mảng
+
+```javascript
+let arr = ['xin', 'chào', 'mọi', 'người']
+arr.unshift('hello')
+console.log(arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'hello', 'xin', 'chào', 'mọi', 'người' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **concat()**
+
+> Gộp mảng
+
+```javascript
+let arr1 = ["Sang", "Long"]
+let arr2 = ["Hưng", "Quân", "Quỳnh Anh"]
+let arr3 = ["anh Duy", "chị Châu"]
+let arr4 = arr1.concat(arr2)
+let arr5 = arr1.concat(arr2, arr3)
+console.log(arr4)
+console.log(arr5)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'Sang', 'Long', 'Hưng', 'Quân', 'Quỳnh Anh' ]
+[ 'Sang', 'Long', 'Hưng', 'Quân', 'Quỳnh Anh', 'anh Duy', 'chị Châu' ]
 ```
 </details>
  
