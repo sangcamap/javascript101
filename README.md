@@ -577,3 +577,738 @@ console.log(arr5)
  
 ---
 <br/><br/>
+
+#### **splice()**
+
+> splice() có thể cắt mảng và thêm phần tử
+
+```javascript
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+fruits.splice(2, 0, "Lemon", "Kiwi") // thêm "Lemon" và "Kiwi" vào vị trí số 2
+console.log(fruits)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
+```
+</details>
+ 
+---
+
+```javascript
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 2, "Lemon", "Kiwi"); // xóa 2 phần tử cuối và thêm "Lemon" và "Kiwi" vào vị trí số 2
+console.log(fruits)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'Banana', 'Orange', 'Lemon', 'Kiwi' ]
+```
+</details>
+ 
+---
+
+```javascript
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+fruits.splice(0, 1) // xóa 1 phần tử tính vị trí số 0
+console.log(fruits)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'Orange', 'Apple', 'Mango' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **slice()**
+
+> Khác với splice() slice không xóa đi phần tử của mảng ban đầu
+
+```javascript
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+console.log(fruits)
+console.log(citrus)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango' ]
+[ 'Orange', 'Lemon' ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **sort()**
+
+> Sắp xếp tăng dần
+
+```javascript
+let arr = [2, 3, 7, 8, 6, 4]
+arr.sort()
+console.log(arr)
+
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 2, 3, 4, 6, 7, 8 ]
+```
+</details>
+ 
+---
+
+<br/><br/>
+
+#### **reverse()**
+
+> Đảo ngược mảng
+
+```javascript
+let arr = [2, 3, 7, 8, 6, 4]
+arr.reverse()
+console.log(arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 4, 6, 8, 7, 3, 2 ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+#### **forEach()**
+
+> Đối với từng phần tử trong mảng, thực hiện từng hành vi tương ứng
+
+```javascript
+let arr = [1, 1, 1, 1, 1, 1]
+arr.forEach(e => console.log(e + 1))
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+2
+2
+2
+2
+2
+2
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+#### **map()**
+
+> Trả về một mảng, được thực hiện hành vi nào đó từ mảng ban đầu
+
+```javascript
+let arr = [1, 1, 1, 1, 1, 1]
+let new_arr = arr.map(e => e + 1)
+console.log(new_arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 2, 2, 2, 2, 2, 2 ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **filter()**
+
+> Trả về một mảng, gồm các phần tử trong mảng ban đầu thỏa điều kiện
+
+```javascript
+let arr = [-1, -2, -3, 1, 2, 3]
+let new_arr = arr.filter(e => e > 0)
+console.log(new_arr)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+[ 1, 2, 3 ]
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+## Working with If ... Else ...
+<br>
+
+```javascript
+let age = 12
+if (age < 18) {
+    console.log("trẻ")
+}
+else{
+    console.log("già")
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+trẻ
+```
+</details>
+ 
+---
+
+```javascript
+let age = 20
+if (age < 18) {
+    console.log("trẻ")
+}
+else{
+    console.log("già")
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+già
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+## Loop 
+<br>
+
+### For loop
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i)
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+0
+1
+2
+3
+4
+```
+</details>
+ 
+---
+
+```javascript
+arr = ["Sang", "Hưng", "Quỳnh Anh"]
+for(let i=0; i<arr.length; i++){
+    console.log(arr[i])
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+```
+</details>
+ 
+---
+<br/><br/>
+
+### For-in loop
+
+```javascript
+arr = ["Sang", "Hưng", "Quỳnh Anh"]
+for(i in arr){
+    console.log(arr[i])
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+```
+</details>
+ 
+---
+<br/><br/>
+
+### For-of loop
+
+```javascript
+arr = ["Sang", "Hưng", "Quỳnh Anh"]
+for(child of arr){
+    console.log(child)
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+```
+</details>
+ 
+---
+<br/><br/>
+
+### While loop
+
+```javascript
+let arr = ["Sang", "Hưng", "Quỳnh Anh"]
+let i = 0
+while(i < arr.length){
+    console.log(arr[i])
+    i++
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+### break & continute
+
+> break sẽ dừng vòng lặp
+
+```javascript
+arr = ["Sang", "Hưng", "Quỳnh Anh", "anh Duy", "chị Châu"]
+for(let i=0; i<arr.length; i++){
+    if (arr[i] == "anh Duy") {
+        break
+    }
+    console.log(arr[i])
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+```
+</details>
+ 
+---
+<br/><br/>
+
+> continute sẽ bỏ qua đoạn code bên dưới và tiếp tục vòng lặp
+
+```javascript
+arr = ["Sang", "Hưng", "Quỳnh Anh", "anh Duy", "chị Châu"]
+for(let i=0; i<arr.length; i++){
+    if (arr[i] == "anh Duy") {
+        continue
+    }
+    console.log(arr[i])
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+Hưng
+Quỳnh Anh
+chị Châu
+```
+</details>
+ 
+---
+<br/><br/>
+
+## Working with function
+<br>
+
+### Declaration Function
+
+> Loại func cơ bản trong javascript, có áp dụng hoisting
+
+```javascript
+function doSomething() {
+    console.log('doSomething');
+}
+
+doSomething()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+doSomething
+```
+</details>
+ 
+---
+<br/><br/>
+
+### Expression Function (anonymous function)
+
+> Func được gán vào một biến, không áp dụng hoisting
+
+```javascript
+let run = function() {
+    console.log('run');
+}
+
+run()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+run
+```
+</details>
+ 
+---
+<br/><br/>
+
+### Arrow Function (ES6)
+
+> Func được thêm từ ES6, có cách khai báo đơn giản, không áp dụng hoisting
+
+```javascript
+let run = () => console.log('run');
+run()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+run
+```
+</details>
+ 
+---
+
+```javascript
+let run = (a,b) => a + b
+let sum = run(10,10)
+console.log(sum)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+20
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+### Hoisting trong javascript
+
+```javascript
+//Function declaration
+speak();
+function speak() {
+	console.log("Chào mọi người");
+}
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Chào mọi người
+```
+</details>
+ 
+---
+<br/><br/>
+
+```javascript
+// Function expression
+speak();
+var speak = function () {
+	console.log("Chào mọi người")
+};
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+speak();
+^
+
+TypeError: speak is not a function
+    at Object.<anonymous> (D:\Code project\basic-js\test.js:4:1)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+```
+</details>
+ 
+---
+<br/><br/>
+
+## Object literals & JSON
+
+### Object
+
+#### **Cấu trúc của Object**
+
+```javascript
+let person = {
+    name:"Sang", 
+    age: 15, 
+    job: "student"
+};
+
+console.log(person)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+{ name: 'Sang', age: 15, job: 'student' }
+```
+</details>
+ 
+---
+
+```javascript
+let person = {
+    name:"Sang", 
+    age: 15, 
+    job: "student"
+};
+
+console.log(person.name)
+console.log(person.age)
+console.log(person.job)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang
+15
+student
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+### JSON
+
+#### **Cấu trúc của JSON**
+
+> Cú pháp của JSON rất đơn giản là mỗi thông tin dữ liệu sẽ có 2 phần đó là key và value
+
+```JSON
+{
+    "students":[
+        {"name":"Sang", "age":"15"},
+        {"name":"Hưng", "age":"15"},
+        {"name":"Quỳnh Anh", "age":"15"}
+    ]
+}
+```
+
+#### **JSON.parse()**
+
+> Dùng để chuyển JSON về object trong javascript
+
+```javascript
+// tạo file a.json
+// terminal node --experimental-json-modules ./main.js
+import data from './a.json';
+console.log(data);
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+{
+  students: [
+    { name: 'Sang', age: '15' },
+    { name: 'Hưng', age: '15' },
+    { name: 'Quỳnh Anh', age: '15' }
+  ]
+}
+```
+</details>
+ 
+---
+
+```javascript
+import data from './a.json';
+console.log(data.students[0]);
+console.log(data.students[0].name);
+console.log(data.students[0].age);
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+{ name: 'Sang', age: '15' }
+Sang
+15
+```
+</details>
+ 
+---
+<br/><br/>
+
+## Class & Constructor
+
+### Khởi tạo
+
+```javascript
+// Tạo class human với constructor gồm 3 tham số gender, age, name
+class Human {
+    constructor(gender, age, name) {
+      this.gender = gender;
+      this.age = age;
+      this.name = name;
+    }
+
+    say = () => {
+      console.log("Xin chào mọi người")
+    }
+}
+```
+
+```javascript
+// Khởi tạo class với constructor
+const sang = new Human("Nam", 15, "Sang Nguyễn");
+sang.say()
+console.log(`Tôi là ${sang.name}, ${sang.age} tuổi`)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Xin chào mọi người
+Tôi là Sang Nguyễn, 15 tuổi
+```
+</details>
+ 
+---
+<br/><br/>
+
+### Kế thừa
+
+```javascript
+class Human {
+    constructor(gender, age, name) {
+      this.gender = gender;
+      this.age = age;
+      this.name = name;
+    }
+
+    say = () => {
+      console.log("Xin chào mọi người")
+    }
+}
+
+class Student extends Human{
+    constructor(idSV, name, age, gender) {
+        super(gender, age, name); // Điền các thuộc tính của class Human
+        this.idSV = idSV;
+    }
+    
+    get_info = () => {
+        console.log(`${this.name}, MSSV là ${this.idSV}`)
+    }
+}
+
+
+const sang = new Student('123', 'Sang Nguyễn', 15, 'Nam')
+sang.say() // Student có thể sử dụng phương thức của Human
+sang.get_info()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Xin chào mọi người
+Sang Nguyễn, MSSV là 123
+```
+</details>
+ 
+---
+<br/><br/>
