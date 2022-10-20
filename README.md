@@ -1116,6 +1116,57 @@ TypeError: speak is not a function
 ---
 <br/><br/>
 
+### Immediately Invoked Function Expressions (IIFE)
+
+> Các hàm IIFE sẽ được gọi ngay khi khởi tạo
+
+```javascript
+(function (){ 
+    console.log("Hello mọi người") 
+})();
+
+(() => {
+    console.log("Hello mọi người")
+})();
+
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Hello mọi người
+Hello mọi người
+```
+</details>
+ 
+---
+
+
+```javascript
+(function(dt) {
+    console.log(dt.toLocaleTimeString());
+})(new Date());
+
+((dt) => {
+    console.log(dt.toLocaleTimeString());
+})(new Date());
+
+//IIFE cũng có thể nhận vào các parameter
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+8:56:07 AM
+8:56:07 AM
+```
+</details>
+ 
+---
+<br/><br/>
+
 ## Object literals & JSON
 
 ### Object
@@ -1186,7 +1237,7 @@ student
 
 #### **JSON.parse()**
 
-> Dùng để chuyển JSON về object trong javascript
+> Dùng JSON.parse() để chuyển JSON về object trong javascript
 
 ```javascript
 // tạo file a.json
@@ -1310,5 +1361,130 @@ Sang Nguyễn, MSSV là 123
 ```
 </details>
  
+---
+<br/><br/>
+
+## Bất đồng bộ (CALLBACK, ASYNC AWAIT)
+
+> CALLBACK, PROMISES, ASYNC AWAIT sinh ra để giải quyết vấn đề bất đồng bộ trong js. Mỗi cái có ưu nhược điểm riêng
+
+```javascript
+const run = () => {
+    setTimeout(() => console.log(1), 0) 
+    // Dòng này sẽ in ra sau cùng mặc dù nó nằm đầu tiên
+    console.log(2)
+    console.log(3)
+}
+
+run()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+2
+3
+1
+```
+</details>
+ 
+---
+<br/><br/>
+
+### CALLBACK
+> Bằng cách dùng callback ta có thể giải quyết vấn đề bất đồng bộ, nhưng nhược điểm của phương pháp này là dễ gây ra "callback hell" nếu cấu trúc phức tạp
+
+```javascript
+const run = () => {
+    setTimeout(() => {
+        console.log(1);
+        (() => {
+            console.log(2);
+            (() => {
+                console.log(3);
+            })();
+        })();
+    }, 0) 
+
+}
+
+run()
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+1
+2
+3
+```
+</details>
+ 
+---
+<br/><br/>
+
+### ASYNC & AWAIT
+
+> - **Async** được sử dụng để khai báo một hàm bất đồng bộ. <br>
+> - **Await** được sử dụng để chờ một Promises trong một khối Async, await chỉ có công dụng thực hiện chức năng tạo ra sự không đồng bộ bằng cách chờ 1 khối trả kết quả
+
+
+```javascript
+// Declaration Function
+
+async function run() {
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(1), 1000)
+    });
+    let result = await promise; // Đợi cho đến khi promise được hoàn thành
+    console.log(result) 
+    console.log(2)
+    console.log(3)
+}
+  
+run();
+```
+
+<details>
+<summary>🟢 Terminal</summary>
+
+```javasript
+1
+2
+3
+```
+</details>
+
+---
+<br/><br/>
+
+```javascript
+// Arrow Function
+
+let run = async () => {
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(1), 1000)
+    });
+    let result = await promise; // Đợi cho đến khi promise được hoàn thành
+    console.log(result) 
+    console.log(2)
+    console.log(3)
+}
+  
+run();
+```
+
+<details>
+<summary>🟢 Terminal</summary>
+
+```javasript
+1
+2
+3
+```
+</details>
+
 ---
 <br/><br/>
