@@ -294,6 +294,115 @@ Chào em nhé! Chào anh nhé!
 ---
 <br/><br/>
 
+#### **toLowerCase()**
+
+```javascript
+let str = 'Xin cHào Mọi người'
+let new_str = str.toLowerCase()
+console.log(str)
+console.log(new_str)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Xin cHào Mọi người
+xin chào mọi người
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **toUpperCase()**
+
+
+```javascript
+let str = 'Xin cHào Mọi người'
+let new_str = str.toUpperCase()
+console.log(str)
+console.log(new_str)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Xin cHào Mọi người
+XIN CHÀO MỌI NGƯỜI
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **concat()**
+
+```javascript
+let text1 = "Sang";
+let text2 = "Nguyễn";
+let text3 = text1.concat(" ", text2);
+console.log(text3)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Sang Nguyễn
+```
+</details>
+ 
+---
+<br/><br/>
+
+
+#### **trim()**
+
+```javascript
+let text1 = "      Xin chào      ";
+let text2 = text1.trim();
+console.log(text1)
+console.log(text2)
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+      Xin chào      
+Xin chào
+```
+</details>
+ 
+---
+<br/><br/>
+
+#### **trimStart()** và **strimEnd()**
+
+```javascript
+let text1 = "      Xin chào      ";
+let text2 = text1.trimStart()
+let text3 = text1.trimEnd()
+console.log(text1)
+console.log(text2 + '.')
+console.log(text3 + '.')
+```
+ 
+<details>
+<summary>🟢 Terminal</summary>
+ 
+```javasript
+Xin chào      
+Xin chào      .
+      Xin chào.
+```
+</details>
+ 
+---
+<br/><br/>
+
 ### String Search
 > Các phương thức String Search trả về vị trí của chuỗi cần tìm ở trong chuỗi gốc nếu có, nếu không có sẽ trả về -1 <br>
 > Các phương thức gồm:
